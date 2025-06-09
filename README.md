@@ -12,6 +12,9 @@ This project aims to develop a machine learning model to classify taxpayers into
 - **Taxpayers:** Affected by audit decisions and compliance enforcement.  
 - **Data Analysts/Scientists:** Develop, validate, and maintain predictive models.
 
+
+### Data Source  
+[Tax Risk Identification Dataset (Kaggle)](https://www.kaggle.com/datasets/ziya07/tax-risk-identification-dataset)
 ### Dataset Choice  
 The dataset used is the **Tax Risk Identification Dataset** sourced from Kaggle, with approximately 1000 observations and 13 features, including:  
 - Financial data: Revenue, Expenses, Tax Liability, Tax Paid, Profit  
@@ -22,7 +25,8 @@ The **Risk_Label** is derived from financial and compliance behaviors to represe
 
 ## Modeling  
 
-### Data Preparation  
+### Data Preparation 
+
 - Performed exploratory data analysis (EDA) including data structure inspection, missing values check (none found), and visualizations of feature distributions and target relationships.  
 - Data cleaning included outlier removal and quality checks.
 
