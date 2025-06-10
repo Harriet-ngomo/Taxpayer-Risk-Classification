@@ -2,8 +2,8 @@
 
 - 🔗 [Final Presentation](./Presentation.pdf) 
 ## Overview
-**FairTax Analytics** is a data-driven company dedicated to transforming how tax authorities identify and prioritize high risk taxpayers. Tax evasion and non compliance undermine government revenue that is vital for essential public services like education, healthcare and infrastructure. 
-This project, developed by FairTax Analytics, leverages machine learning to automate taxpayer risk classification enabling smarter audit targeting, early risk detection and more equitable enforcement
+**FairTax Analytics** is a data driven company dedicated to transforming how tax authorities identify and prioritize high risk taxpayers. Tax evasion and non compliance undermine government revenue that is vital for essential public services like education, healthcare and infrastructure
+This project developed by FairTax Analytics leverages machine learning to automate taxpayer risk classification enabling smarter audit targeting early risk detection and more equitable enforcement
 
 ## Business and Data Understanding
 
@@ -65,8 +65,8 @@ Manual audit selection often relies on limited human judgment and scarce resourc
 - **Logistic Regression** ::Baseline
 - **Untuned Decision Tree**
 - **Tuned Decision Tree** ::via GridSearchCV
-- 
-- ![image](https://github.com/user-attachments/assets/ed02f230-bca3-434d-86ab-ca5aa59241e7)
+  
+![image](https://github.com/user-attachments/assets/ed02f230-bca3-434d-86ab-ca5aa59241e7)
 
 - **Tuned Random Forest** ::*Best Performing*
 
