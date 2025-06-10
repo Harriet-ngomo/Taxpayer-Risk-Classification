@@ -2,8 +2,8 @@
 
 - 🔗 [Final Presentation](./Presentation.pdf) 
 ## Overview
-
-**FairTax Analytics** is a data driven initiative aimed at transforming how tax authorities identify and prioritize high risk taxpayers. Tax evasion and non compliance undermine government revenue critical for essential services like education, healthcare and infrastructure. This project leverages machine learning to automate taxpayer risk classification, enabling smarter audit targeting, early risk detection and more equitable enforcement
+**FairTax Analytics** is a data-driven company dedicated to transforming how tax authorities identify and prioritize high risk taxpayers. Tax evasion and non compliance undermine government revenue that is vital for essential public services like education, healthcare and infrastructure. 
+This project, developed by FairTax Analytics, leverages machine learning to automate taxpayer risk classification enabling smarter audit targeting, early risk detection and more equitable enforcement
 
 ## Business and Data Understanding
 
@@ -65,15 +65,18 @@ Manual audit selection often relies on limited human judgment and scarce resourc
 - **Logistic Regression** ::Baseline
 - **Untuned Decision Tree**
 - **Tuned Decision Tree** ::via GridSearchCV
+- 
 - ![image](https://github.com/user-attachments/assets/ed02f230-bca3-434d-86ab-ca5aa59241e7)
 
 - **Tuned Random Forest** ::*Best Performing*
+
 
 ###  Feature Engineering
 
 - Removed features that could introduce noise or lead to overfitting   
 - Applied One-Hot Encoding for categorical variables  
-- Addressed class imbalance using **SMOTE** (Synthetic Minority Oversampling Technique)  
+- Addressed class imbalance using **SMOTE** (Synthetic Minority Oversampling Technique)
+    
 ![image](https://github.com/user-attachments/assets/4e8a4cf3-d649-4772-a850-acdf973cb321)
 
 
@@ -101,7 +104,9 @@ We prioritized **ROC AUC** because it:
 
 The **Tuned Random Forest** model demonstrated the best balance between recall, precision and AUC. It effectively flags high risk taxpayers, supports fair audit prioritization and enhances compliance efforts
 
+
 ![image](https://github.com/user-attachments/assets/bf5d79c3-f225-4ce1-9159-a98247afbfa5)
+
 
 ![image](https://github.com/user-attachments/assets/5d92bf6a-f01d-4796-a333-6f57f10c847b)
 
@@ -161,6 +166,6 @@ FairTax-Analytics/
 │
 ├── .gitignore                 # Ignore large/sensitive files  
 │
-└── presentation.pdf           # [Final Presentation](./Presentation.pdf) 
+└── presentation.pdf           # Final Presentation
 ```
 
