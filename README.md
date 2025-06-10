@@ -156,15 +156,11 @@ FairTax-Analytics/
 │
 ├── data/                      # Cleaned dataset  
 │
-├── models/                    # Serialized models (.pkl files)  
+├── models/                    # Modelling
 │
 ├── outputs/                   # Figures, charts, and reports  
 │
 ├── README.md                  # Project documentation  
-│
-├── requirements.txt           # List of Python dependencies  
-│
-├── .gitignore                 # Ignore large/sensitive files  
 │
 └── presentation.pdf           # Final Presentation
 ```
