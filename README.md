@@ -47,6 +47,7 @@ Manual audit selection often relies on limited human judgment and scarce resourc
 ---
 
 ## Data Preparation
+![image](https://github.com/user-attachments/assets/ecb86bd5-c8e8-47f1-9769-d879120eaa25)
 
 - Conducted exploratory data analysis (EDA)
 - Visualized feature distributions and class relationships
@@ -64,13 +65,17 @@ Manual audit selection often relies on limited human judgment and scarce resourc
 - **Logistic Regression** ::Baseline
 - **Untuned Decision Tree**
 - **Tuned Decision Tree** ::via GridSearchCV
+- ![image](https://github.com/user-attachments/assets/ed02f230-bca3-434d-86ab-ca5aa59241e7)
+
 - **Tuned Random Forest** ::*Best Performing*
 
-### Feature Engineering
+###  Feature Engineering
 
-- Ratio-based feature construction
-- One Hot Encoding encoding for categorical features
-- Addressed class imbalance using  SMOTE
+- Removed features that could introduce noise or lead to overfitting   
+- Applied One-Hot Encoding for categorical variables  
+- Addressed class imbalance using **SMOTE** (Synthetic Minority Oversampling Technique)  
+![image](https://github.com/user-attachments/assets/4e8a4cf3-d649-4772-a850-acdf973cb321)
+
 
 ---
 
@@ -96,6 +101,11 @@ We prioritized **ROC AUC** because it:
 
 The **Tuned Random Forest** model demonstrated the best balance between recall, precision and AUC. It effectively flags high risk taxpayers, supports fair audit prioritization and enhances compliance efforts
 
+![image](https://github.com/user-attachments/assets/bf5d79c3-f225-4ce1-9159-a98247afbfa5)
+
+![image](https://github.com/user-attachments/assets/5d92bf6a-f01d-4796-a333-6f57f10c847b)
+
+
 ### Key Takeaways
 
 - **Efficient Audit Selection**: Targets risky taxpayers while minimizing false positives
@@ -112,16 +122,45 @@ The **Tuned Random Forest** model demonstrated the best balance between recall, 
 4. **Explore Advanced Ensembles** like Gradient Boosting or model stacking in future versions
 
 ---
+##  Next Steps
+
+1. **Model Deployment**  
+   Integrate the Tuned Random Forest model into the tax authority’s audit systems to automate risk classification
+
+2. **Dashboard Development**  
+   Build interactive dashboards to help auditors explore taxpayer risk scores and decision insights
+
+3. **Model Monitoring**  
+   Set up regular performance evaluations and fairness audits to ensure the model remains accurate and unbiased over time
+
+4. **Expand to Multi-Class Risk Levels**  
+   Reintroduce medium-risk taxpayers and explore more granular classification to support tiered audit strategies
+
+---
+
 ## Repository Structure
 
-├── notebooks/ # EDA and model development notebooks
-│ ├── 01_data_cleaning.ipynb
-│ ├── 02_feature_engineering.ipynb
-│ ├── 03_modeling.ipynb
-│ └── 04_evaluation.ipynb
-├── data/ # Cleaned dataset 
-├── models/ # Modelling
-├── outputs/ # Figures, charts, and reports
-├── README.md # Project documentation
-└── presentation.pdf #  🔗 [Final Presentation](./Presentation.pdf) 
+```
+FairTax-Analytics/
+│
+├── notebooks/                  # EDA and model development notebooks  
+│   ├── 01_data_cleaning.ipynb  
+│   ├── 02_feature_engineering.ipynb  
+│   ├── 03_modeling.ipynb  
+│   └── 04_evaluation.ipynb  
+│
+├── data/                      # Cleaned dataset  
+│
+├── models/                    # Serialized models (.pkl files)  
+│
+├── outputs/                   # Figures, charts, and reports  
+│
+├── README.md                  # Project documentation  
+│
+├── requirements.txt           # List of Python dependencies  
+│
+├── .gitignore                 # Ignore large/sensitive files  
+│
+└── presentation.pdf           # [Final Presentation](./Presentation.pdf) 
+```
 
