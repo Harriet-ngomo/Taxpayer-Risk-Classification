@@ -3,7 +3,7 @@
 - 🔗 [Final Presentation](./Presentation.pdf) 
 ## Overview
 
-**FairTax Analytics** is a data driven initiative aimed at transforming how tax authorities identify and prioritize high-risk taxpayers. Tax evasion and non compliance undermine government revenue critical for essential services like education, healthcare and infrastructure. This project leverages machine learning to automate taxpayer risk classification, enabling smarter audit targeting, early risk detection, and more equitable enforcement.
+**FairTax Analytics** is a data driven initiative aimed at transforming how tax authorities identify and prioritize high risk taxpayers. Tax evasion and non compliance undermine government revenue critical for essential services like education, healthcare and infrastructure. This project leverages machine learning to automate taxpayer risk classification, enabling smarter audit targeting, early risk detection and more equitable enforcement
 
 ## Business and Data Understanding
 
@@ -11,7 +11,7 @@
 
 Manual audit selection often relies on limited human judgment and scarce resources, leading to inefficiencies and unfair targeting. Our core business goal is to:
 
-> **Develop a predictive model to classify taxpayers by risk level (Low vs. High)** to support targeted audits, enhance compliance monitoring, and optimize revenue recovery.
+> **Develop a predictive model to classify taxpayers by risk level (Low VS High)** to support targeted audits, enhance compliance monitoring and optimize revenue recovery
 
 ### Stakeholders
 
@@ -25,10 +25,11 @@ Manual audit selection often relies on limited human judgment and scarce resourc
 
 ### Dataset Summary
 
-- **Source**: [Tax Risk Identification Dataset – Kaggle](https://www.kaggle.com) *(Add exact link if available)*
-- **Observations**: ~1,000
+- **Data Source**:
+[Tax Risk Identification Dataset (Kaggle)](https://www.kaggle.com/datasets/ziya07/tax-risk-identification-dataset)
+- **Observations**: 1000
 - **Features**: 13 columns including financial and behavioral metrics
-- **Target Variable**: `Risk_Label` (High = 1, Low = 0). Medium-risk entries were excluded for binary classification.
+- **Target Variable**: `Risk_Label` (High = 1, Low = 0).Medium risk entries were excluded for binary classification
 
 #### Key Features
 
@@ -50,10 +51,9 @@ Manual audit selection often relies on limited human judgment and scarce resourc
 - Conducted exploratory data analysis (EDA)
 - Visualized feature distributions and class relationships
 - Verified no missing data
-- Removed outliers and medium-risk records
-- Created engineered features: `Profit`, `Tax_Compliance_Ratio`, `Audit_to_Tax_Ratio`
+- Removed outliers and medium risk records
 - Categorical encoding and class balancing using SMOTE
-- Train-test split: 80/20
+- Train-test split: Default split 
 
 ---
 
@@ -69,8 +69,8 @@ Manual audit selection often relies on limited human judgment and scarce resourc
 ### Feature Engineering
 
 - Ratio-based feature construction
-- Label encoding for `Industry`
-- Addressed class imbalance with SMOTE
+- One Hot Encoding encoding for categorical features
+- Addressed class imbalance using  SMOTE
 
 ---
 
@@ -79,7 +79,7 @@ Manual audit selection often relies on limited human judgment and scarce resourc
 ### Chosen Metric: ROC AUC
 
 We prioritized **ROC AUC** because it:
-- Is threshold-independent
+- Is threshold independent
 - Measures separability between classes
 - Balances recall and precision
 
@@ -94,7 +94,7 @@ We prioritized **ROC AUC** because it:
 
 ## Conclusion
 
-The **Tuned Random Forest** model demonstrated the best balance between recall, precision and AUC. It effectively flags high-risk taxpayers, supports fair audit prioritization, and enhances compliance efforts
+The **Tuned Random Forest** model demonstrated the best balance between recall, precision and AUC. It effectively flags high risk taxpayers, supports fair audit prioritization and enhances compliance efforts
 
 ### Key Takeaways
 
@@ -106,10 +106,10 @@ The **Tuned Random Forest** model demonstrated the best balance between recall, 
 
 ## Recommendations
 
-1. **Deploy Tuned Random Forest** as the core classification engine for audits.
-2. **Develop Auditor Dashboards** with risk scores and interpretability tools (e.g., SHAP).
-3. **Establish Monitoring Frameworks** to track fairness, drift, and performance.
-4. **Explore Advanced Ensembles** like Gradient Boosting or model stacking in future versions.
+1. **Deploy Tuned Random Forest** as the core classification engine for audits
+2. **Develop Auditor Dashboards** with risk scores and interpretability tools like  SHAP
+3. **Establish Monitoring Frameworks** to track fairness, drift and performance
+4. **Explore Advanced Ensembles** like Gradient Boosting or model stacking in future versions
 
 ---
 ## Repository Structure
@@ -119,11 +119,9 @@ The **Tuned Random Forest** model demonstrated the best balance between recall, 
 │ ├── 02_feature_engineering.ipynb
 │ ├── 03_modeling.ipynb
 │ └── 04_evaluation.ipynb
-├── data/ # Cleaned dataset (excluding raw for privacy)
-├── models/ # Serialized models (e.g., .pkl files)
+├── data/ # Cleaned dataset 
+├── models/ # Modelling
 ├── outputs/ # Figures, charts, and reports
-├── README.md # Project documentation (this file)
-├── requirements.txt # List of dependencies
-├── .gitignore # Ignoring sensitive/large files
-└── presentation.pdf # Final stakeholder presentation 
+├── README.md # Project documentation
+└── presentation.pdf #  🔗 [Final Presentation](./Presentation.pdf) 
 
