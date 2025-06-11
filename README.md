@@ -148,20 +148,10 @@ The **Tuned Random Forest** model demonstrated the best balance between recall, 
 ```
 FairTax-Analytics/
 │
-├── notebooks/                  # EDA and model development notebooks  
-│   ├── 01_data_cleaning.ipynb  
-│   ├── 02_feature_engineering.ipynb  
-│   ├── 03_modeling.ipynb  
-│   └── 04_evaluation.ipynb  
+├── notebook.ipynb  
 │
-├── data/                      # Cleaned dataset  
+├── README.md                  
 │
-├── models/                    # Modelling
-│
-├── outputs/                   # Figures, charts, and reports  
-│
-├── README.md                  # Project documentation  
-│
-└── presentation.pdf           # Final Presentation
+└── presentation.pdf        
 ```
 
